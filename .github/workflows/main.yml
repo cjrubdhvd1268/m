@@ -36,14 +36,16 @@ jobs:
         with:
           distribution: 'zulu'
           java-version: 11
-
+      
       - name: Setup Android SDK
         uses: android-actions/setup-android@main
-
+        with:
+          cmdline-tools-version: 9477386
+      
       - name: Setup Haxe
         uses: krdlab/setup-haxe@v1.2.0
         with:
-          haxe-version: 4.2.0
+          haxe-version: 4.2.5
 
       - name: Install Haxelib
         run: |
